@@ -1,0 +1,12 @@
+@font-face{
+    font-family: 'Mono';
+    src: url('./Assets/Fonts/Jetbrain.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Playfair';
+    src: url('./Assets/Fonts/Playfair.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
