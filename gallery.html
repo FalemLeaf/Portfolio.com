@@ -9,41 +9,152 @@
     display: none;
     }
     body {
-        background-color: #0F0F0F;
-        margin: 0px;
-    }
-    .Header {
         background-image: url("./Assets/Gallery_BG.jpg");
         background-size: 100%;
         background-repeat: no-repeat;
+        margin: 0px;
+    }
+    .Header {
         display: flex;
-        background-color: #0F0F0F;
+        flex-direction: column;
         color: #ebcdcd;
-        height: 100vh;
-        
+        height: 500px;
         
         .HeaderText{
-            margin-top: 15%;
-            margin-left: 25%;
-            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            margin-top: 200px;
             margin-bottom: 20px;
-            text-align: left;
+            margin-right: 80px;
+            text-align: right;
             font-weight: 50;
             h1{
                 margin: 5px;
                 font-size: 48px;
                 font-family: Playfair;
+                text-align: right;
                 font-weight: 50;
                 line-height: 1.1;
+                width: 400px;
             }
             p{
+                justify-items: right;
+
+                text-align: justify;
                 margin: 0px;
-                margin-left: 30px;
+                margin-right: 10px;
                 font-size: 16px;
                 font-family: Mono;
                 font-weight: 20;
                 line-height: 1.1;
-                width: 75%;
+                width: 350px;
+
+            }
+        }
+    }
+    .glrBody{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.274);
+        background-color: #1b1b1b8e;
+        width: 100vw;
+        .spacer{
+            width: 25%;
+        }
+        .cardBorder{
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            border-top: 1px solid rgb(80, 76, 70);
+            border-bottom: 1px solid rgb(80, 76, 70);
+            width: 100%;
+            margin: 10px 0;
+            .cardContainer{
+                display: grid;
+                justify-content: space-between;
+                grid-template-columns: auto auto auto;
+
+                
+                .card{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 280px;
+                    height: 380px;
+                    background-color: rgb(46, 35, 35);
+                    border: 1px solid rgb(100, 100, 100);
+                    border-radius: 5px;
+                    margin: 10px;
+                    transition: transform 0.1s ease-in;
+
+                    .cardImg{
+                        margin-top: 10px;
+                        width: 90%;
+                        height: 280px;
+                        border:1px solid rgb(92, 92, 92);
+                        border-radius: 2.5px;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                        }
+
+                    }
+                    .cardDesc{
+                        color: white;
+                        font-family: playfair;
+                        width: 90%;
+                        h2{
+                            font-weight: 50;
+                            margin-top: 10px;
+                            text-align: left;
+                        }
+                    }
+                }
+                .card:hover{
+                    transform: scale(1.1);
+                    transition: 0.1s ease-out;
+                }
+                .wideCard{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 585px;
+                    height: 380px;
+                    background-color: rgb(46, 35, 35);
+                    border: 1px solid rgb(100, 100, 100);
+                    border-radius: 5px;
+                    margin: 10px;
+                    transition: transform 0.1s ease-in;
+
+                    .cardImg{
+                        margin-top: 10px;
+                        width: 95%;
+                        height: 280px;
+                        border:1px solid rgb(92, 92, 92);
+                        border-radius: 2.5px;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                        }
+
+                    }
+                    .cardDesc{
+                        color: white;
+                        font-family: playfair;
+                        width: 90%;
+                        h2{
+                            font-weight: 50;
+                            margin-top: 10px;
+                            text-align: left;
+                        }
+                    }
+                }
+                .wideCard:hover{
+                    transform: scale(1.1);
+                    transition: 0.1s ease-out;
+                }
             }
         }
     }
@@ -52,8 +163,7 @@
         width: 100%;
         background-color: #554b4127;
         padding-bottom: 50px;
-        padding-top: 10px;
-
+        margin-top: 50px;
         .contFoot{
             display: flex;
             justify-content: space-evenly;
@@ -117,14 +227,58 @@
 <body>
     <div class="Header">
         <div class="HeaderText">
-            <h1>To create something with high standard.</h1>
+            <h1>The art piece and the artist.</h1>
             <p>
-                Excel in everything you do. Do the things you don't know. And to achieve the things we never thought possible.
+                Capture every moment, those creation you made, every step you take, the part of you that you are proud of.
                 
             </p>
         </div>
-        <div>
-
+    </div>
+    <div class="glrBody">
+        <div class="spacer"></div>
+        <div class="cardBorder">
+            <div class="cardContainer">
+                <div class="card">
+                    <div class="cardImg">
+                        <img src="Assets/img1.png" alt="1">
+                    </div>
+                    <div class="cardDesc">
+                        <h2>Me</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardImg">
+                        <img src="Assets/img2.png" alt="1">
+                    </div>
+                    <div class="cardDesc">
+                        <h2>Cutie Cat</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardImg">
+                        <img src="Assets/img3.png" alt="1">
+                    </div>
+                    <div class="cardDesc">
+                        <h2>My GF</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardImg">
+                        <img src="Assets/img4.png" alt="1">
+                    </div>
+                    <div class="cardDesc">
+                        <h2>The WIP Site</h2>
+                    </div>
+                </div>
+                <div class="wideCard" style="grid-column: span 2;">
+                    <div class="cardImg">
+                        <img src="Assets/img5.png" alt="1">
+                    </div>
+                    <div class="cardDesc">
+                        <h2>My First Mod</h2>
+                    </div>
+                </div>               
+            </div>
         </div>
     </div>
     <div class="Footer">
@@ -135,8 +289,8 @@
                 <p>May this site help you undertstand the things that I do, and maybe will motivate you to do what you want or love.</p>
             </div>
             <div class="Pages">
+                <a href="home.html">Home</a>
                 <a href="autobiography.html">About me</a>
-                <a href="gallery.html">Gallery</a>
                 <a href="contacts.html">Contacts</a>
             </div>
             
