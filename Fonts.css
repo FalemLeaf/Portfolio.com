@@ -7,7 +7,7 @@
 }
 @font-face{
     font-family: 'Playfair';
-    src: url('./Assets/Fonts/Playfair.ttf') format('truetype');
+    src: url('Assets/Fonts/Playfair.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
