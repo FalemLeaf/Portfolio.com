@@ -1,158 +1,146 @@
 <!DOCTYPE html>
-<!-- This is the main page of the IFRAME -->
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="fonts.css">
-    <meta charset="UTF-8">
-    <title>JF's Portfolio</title>
-
-    <style>
-        body {
-            overflow: hidden;
-            background-color: #0F0F0F;
-
-            color: #EEEEEE;
-            margin: 0;
-            font-family: Mono;
-            
-        }
-        .ContHeader { /* i've added a header here -just edit */
-            position: fixed;
-            top: 0;
-            z-index: 1;
-            width: 100%;
-            display: flex;
-            margin-top:0px;
-            color: #EEEEEE;
-            font-family: Playfair;
-            font-size: 12px;
-            height: 20px;
-            justify-content: center;
-            padding: 20px;
-            background-color: #212121ea;
-            border-bottom: 1.5px solid #2b2b2b;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    <head>
+        <link rel="stylesheet" href="fonts.css">
+    </head>
+<style>
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+    display: none;
+    }
+    body {
+        background-color: #0F0F0F;
+        margin: 0px;
+    }
+    .Header {
+        background-image: url("./Assets/Gallery_BG.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        background-color: #0F0F0F;
+        color: #ebcdcd;
+        height: 100vh;
+        
+        
+        .HeaderText{
+            margin-top: 15%;
+            margin-left: 25%;
+            width: 40%;
+            margin-bottom: 20px;
+            text-align: left;
+            font-weight: 50;
             h1{
-                align-self: center;
-                font-weight: 30;
+                margin: 5px;
+                font-size: 48px;
+                font-family: Playfair;
+                font-weight: 50;
+                line-height: 1.1;
+            }
+            p{
+                margin: 0px;
+                margin-left: 30px;
+                font-size: 16px;
+                font-family: Mono;
+                font-weight: 20;
+                line-height: 1.1;
+                width: 75%;
             }
         }
-        /* Main container */
-        .container {
+    }
+    .Footer{
+        height: 100%;
+        width: 100%;
+        background-color: #554b4127;
+        padding-bottom: 50px;
+        padding-top: 10px;
+
+        .contFoot{
             display: flex;
-            height: 100vh;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 150px;
             width: 100%;
-            
-            .profile{
+            border-top: 1px solid #3b3b3b;
+            border-bottom: 1px solid #3b3b3b;
+            box-shadow: 0px 0px 10px #4e443159;
+            background-color: #1b1b1b8e;
+
+            .Spacer{
+                width: 20%;
+            }
+            .Details{
+                color: #ebcdcd;
+                width: 30%;
+                margin-right: 50px;
+                h2{
+                    font-family: Playfair;
+                    margin-bottom: 5px;
+                    font-weight: 60;
+                }
+                p{
+                    font-family: Mono;
+                    margin-top: 0px;
+                    font-size: 12px;
+                    text-align: justify;
+                    opacity: 0.8;
+                }
+
+            }
+            .Pages{
+                width: 30%;
                 display: flex;
-                margin-bottom: 40px;
-                align-items: center;
-                .pfpBorder{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 150px;
-                    margin-right: 20px;
-                    border-radius: 100%;
-                    border: 1.8px solid #434343;
-                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-                    .pfp{
-                        width: 100%;
-                        height: 100%;
-                    }
-                    
+                flex-direction: column;
+                border-left: 2px solid #5f5f5f;
+                padding-left: 20px;
+                align-content: center;
+
+                a{
+                    margin-bottom: 5px;
+                    font-family: Mono;
+                    color: #a8a8a8;
+                    text-decoration: none;
+
+                }
+                a:hover{
+                    margin-bottom: 5px;
+                    font-family: Mono;
+                    color: white;
+                    text-decoration: none;
                 }
             }
         }
-        /* Left column - Navigation */
-        .menu {
-            
-            margin-top: 0px;
-            position: Fixed;
-            top: 0;
-            width: 18%;
-            height: 100%;
-            background-color: #181818c4;
-            padding: 20px;
-            padding-top: 80px;
-            border-right: 1.5px solid #2b2b2b;
-
-        }
-        .menu:hover{
-            background-color: #181818e7;
-            transition: opacity 0.1s linear;
-        }
-        .menu h2 {
-            color: #b9b9b9;
-            font-size: 18px;
-        }
-        .menu a {
-            display: block;
-            color: #bbb4a5;
-            text-decoration: none;
-            padding: 5px;
-            margin-bottom: 10px;
-            background-color: #2B2A2A;
-            border-radius: 5px;
-            border: 1px solid #434343;
-            box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
-        }
-        .menu a:hover {
-            background-color: #ffd0d0;
-            color: #2B2A2A;
-            border: 1px solid #a1a1a1;
-            font-weight: bold;
-            
-        }
-        /* Right column - Content */
-        .content {
-            
-            width: 100%;
-            height: 100%;
-            
-
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
         
-    </style>
-</head>
+    }
+    
+</style>
 
 <body>
-    <div class="ContHeader">  <!-- header area  here -->
-        <h1> JF's Portfolio.</h1>
-    </div>
-    <div class="container">
+    <div class="Header">
+        <div class="HeaderText">
+            <h1>To create something with high standard.</h1>
+            <p>
+                Excel in everything you do. Do the things you don't know. And to achieve the things we never thought possible.
+                
+            </p>
+        </div>
+        <div>
 
-        <!-- LEFT COLUMN -->
-        <div class="menu">
-            <div class="profile">
-                <div class="pfpBorder"><img class="pfp" src="Assets/Profile.png"></div>
-                <h2>John Francis B. Montano</h2>
+        </div>
+    </div>
+    <div class="Footer">
+        <div class="contFoot">
+            <div class="Spacer"></div>
+            <div class="Details">
+                <h2>JF's Portfolio.</h2>
+                <p>May this site help you undertstand the things that I do, and maybe will motivate you to do what you want or love.</p>
             </div>
-
-            <a href="home.html" target="contentFrame">Home</a>
-            <a href="autobiography.html" target="contentFrame">About My Self</a>
-            <a href="gallery.html" target="contentFrame">Gallery</a>
-            <a href="contact.html" target="contentFrame">Contact</a>
-        </div>
-
-        <!-- RIGHT COLUMN -->
-        <div class="content">
-            <iframe
-                src="home.html"
-                name="contentFrame"
-                title="Page Content">
-            </iframe>
-            
+            <div class="Pages">
+                <a href="autobiography.html">About me</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contacts.html">Contacts</a>
+            </div>
             
         </div>
-        
-
     </div>
-
 </body>
 </html>
